@@ -42,6 +42,7 @@ h1{
 }
 .preview-image{
     height:45vh;
+    border-radius:15px;
 }
 .rounded-button{
     width:12vw;
@@ -80,7 +81,7 @@ h1{
     min-width:300px;
     max-width:350px;
     padding:20px;
-    padding-top:30px;
+    padding-top:35px;
     color:black;
     text-decoration:none;
     margin:30px;
