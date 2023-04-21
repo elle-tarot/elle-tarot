@@ -37,7 +37,7 @@
              document.getElementById("clear-search").style.display = "inline";
         for(var i = 0; i < entries.length; i++){
             console.log(entries[i].id)
-            if (!entries[i].id.includes(searchInput)){
+            if (!entries[i].id.includes(searchInput.toLowerCase())){
                 entries[i].style.display = "none";
                 console.log(entries[i].id)
             } else{
@@ -56,7 +56,7 @@
 </body>
     <footer>
   <input type="text" value="" id="search-input" name="search-input" autocomplete="off" class="search-box" placeholder="Search" onchange=searchEntries()>
-            <button class="clear-button" id="clear-search" onclick=clearSearch()>clear search</button>
+    <button class="clear-button" id="clear-search" onclick=clearSearch()>clear search</button>
         <form action="/">
       <button class="rounded-button" >about</button>
         </form>
