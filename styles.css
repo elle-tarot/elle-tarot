@@ -19,15 +19,26 @@ footer{
 }
 
 h1{
-    padding:2vh;
     min-height:50px;
     text-align:left;
     font-weight:normal;
+    padding-left:20px;
 }
 .header{
     display:flex;
     justify-content: flex-start;
     width:100%;
+}
+.header-content{
+    background-color:white;
+    display:flex;
+    margin-top:25px;
+    margin-left:25px;
+    border-radius:25px;
+    padding-left:30px;
+    padding-right:30px;
+    padding-top:10px;
+    
 }
 .preview-image{
     height:45vh;
@@ -150,4 +161,19 @@ h1{
     min-height:45px;
     padding-top:3vh;
     
+}
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) { 
+    footer{
+        height:6vh;
+    }
+    .search-box{
+        width:450px;
+        font-size:40px;
+    } 
+    .scroll-top{
+
+        font-size:40px;
+    }
+
 }
