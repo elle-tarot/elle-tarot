@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+   <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="header">
+        <img src="round-icon.png" class="icon-pic"/>
+    <h1>elle tarot</h1>
+    </div>
+    <div class = "entries-list">
+        <a href="/" class="entry" id="death">
+    <span>
+    <img src="death-card.png" alt="Image of the Death Card from the Paulina Tarot Deck" class ="preview-image"/>
+        <p class="entry-title">the death card</p>
+        <p class="entry-preview">post preview goes here</p>
+            </span>
+        </a>
+
+    <a href="/" class="entry" id="9 nine of swords">
+    <span>
+    <img src="nine-swords-rx.png" alt="Image of the Nine of Swords card upside down from the Paulina Tarot Deck" class="preview-image"/>
+        <p class="entry-title">nine of swords reversed</p>
+        <p class="entry-preview">post preview goes here</p>
+            </span>
+        </a>
+    </div>
+    <script>
+    function searchEntries(){
+        searchInput = document.getElementById("search-input").value;
+        entries = document.getElementsByClassName("entry");
+        if (searchInput == ""){
+            window.location.reload();
+             }
+         else {
+             document.getElementById("clear-search").style.display = "inline";
+        for(var i = 0; i < entries.length; i++){
+            console.log(entries[i].id)
+            if (!entries[i].id.includes(searchInput)){
+                entries[i].style.display = "none";
+                console.log(entries[i].id)
+            } else{
+                entries[i].style.display = "inline";
+                console.log(entries[i].id)
+            }
+        }
+        }
+       
+    }
+    function clearSearch(){
+            document.getElementById("search-input").value = ""
+             window.location.reload();
+        }
+    </script>
+</body>
+    <footer>
+  <input type="text" value="" id="search-input" name="search-input" autocomplete="off" class="search-box" placeholder="Search" onchange=searchEntries()>
+            <button class="clear-button" id="clear-search" onclick=clearSearch()>clear search</button>
+        <form action="/">
+      <button class="rounded-button" >about</button>
+        </form>
+        <a href="#top" class="scroll-top"> ^ </a>
+    </footer>
+
+</html>
